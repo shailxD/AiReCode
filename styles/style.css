@@ -6,6 +6,8 @@
     --clr-slate800: #1e293b;
     --clr-green: #09BF60;
     --clr-orange: #f97316;
+    --clr-light50: rgba(255, 255, 255, 0.5);
+    --clr-codestrong: #070a13;
 
     /* rose rgb(225, 29, 72) */
     /* green rgb(9, 191, 96) */
@@ -46,6 +48,8 @@ html{
     --clr-slate400: #1e293b;
     --clr-slate600: #1e293b;
     --clr-slate800: #1e293b;
+    --clr-light50: rgba(0, 0, 0, 0.5);
+    --clr-codestrong: #f97316;
 }
 
 body{

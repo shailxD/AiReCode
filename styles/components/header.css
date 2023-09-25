@@ -1,5 +1,6 @@
 .header{
     position: relative;
+    z-index: 9999;
 }
 
 .header__nav{
@@ -57,16 +58,21 @@
     }
     
     .header__link{
-        font-size: var(--size-xs);
         text-decoration: none;
+        font-size: var(--size-xs);
         font-weight: 600;
+        padding: 0.5em 1em;
+        border-radius: 1.5rem;
         color: var(--clr-slate600);
         letter-spacing: -0.05em;
-        transition: color 0.3s;
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
     
     .header__link:hover{
-        color: var(--clr-green);
+        color: #f1f5f9;
+        background-color: var(--clr-green); 
+        box-shadow: 0 10px 20px rgba(9, 191, 96, 0.5), 0 6px 6px rgba(9, 191, 96, 0.5), 0 0 100px -10px var(--clr-green);
+        transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
     
     .header__line{

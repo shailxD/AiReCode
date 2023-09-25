@@ -1,0 +1,124 @@
+.code-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.code-input__Code-heading{
+    margin-top: 1rem;
+    font-size: var(--size-2xl);
+    color: var(--clr-light);
+    text-transform: capitalize;
+}
+
+#generate-code-title{
+    margin-top: 2rem;
+}
+
+.code-input__textarea {
+    width: 100%;
+    height: 200px;
+    padding: 1rem;
+    border: 1px solid var(--clr-dark);
+    border-radius: 2rem;
+}
+
+.code-input__btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: var(--size-sm);
+}
+
+.chat-bubble {
+    background-color: var(--clr-slate400);
+    color: var(--clr-dark);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 2rem 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    display: block;
+    white-space: pre-wrap;
+    text-align: left;
+}
+
+.code-input p strong{
+    color: var(--clr-codestrong);
+}
+
+.code-input__generated-output {
+    white-space: pre-wrap;
+    border: 1px solid var(--clr-dark);
+    color: var(--clr-dark);
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 2rem;
+    width: 100%;
+    display: none;
+}
+
+.code-input__hr{
+    margin-top: 2rem;
+    border-color: var(--clr-slate800);
+}
+
+/* xs */
+@media (min-width: 475px) {
+    .code-input{
+        gap: 1.5rem;
+    }
+    
+    .code-input__Code-heading{
+        font-size: var(--size-3xl);
+    }
+    
+    #generate-code-title{
+        margin-top: 2.5rem;
+    }
+    
+    .code-input__btn {
+        font-size: var(--size-base);
+    }
+}
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+    .code-input__Code-heading{
+        font-size: var(--size-4xl);
+    }
+    
+    .code-input__btn {
+        font-size: var(--size-lg);
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .code-input{
+        gap: 2rem;
+    }
+    
+    .code-input__Code-heading{
+        font-size: var(--size-5xl);
+    }
+    
+    #generate-code-title{
+        margin-top: 3rem;
+    }
+    
+    .code-input__btn {
+        font-size: var(--size-xl);
+    }
+}
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

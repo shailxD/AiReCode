@@ -10,12 +10,16 @@ import '../styles/components/footer.css';
 import '../styles/components/mobile-nav.css';
 import '../styles/utils.css';
 
+import { customCursor } from './utils/custom-cursor';
 import darkMode from './utils/dark-mode'; 
 import mobileNav from './utils/mobile-nav';
+import { setupAutoResizeTextarea } from './utils/auto-resize';
 import lazyLoading from './utils/lazy-loading';
 
+customCursor(); // add a custom cursor
 darkMode(); // theme toggling function
 mobileNav(); // mobile menu toggle
+setupAutoResizeTextarea(); // call the auto-resize setup function
 lazyLoading(); //lazy laoding for optimisations
 
 // main api logic
@@ -33,6 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const inputCode = codeInput.value;
             const generatedCode = await generateCodeWithAI(inputCode);
+
+            // Explicitly set the height to 50px to reset it
+            codeInput.style.height = '100px';
 
             // Create a new chat bubble element
             const chatBubble = document.createElement('div');

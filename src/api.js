@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 // OpenAI API key
-const apiKey = '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';
+const apiKey = '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';
 
 // Function to generate code using the GPT API
 export async function generateCodeWithAI(inputCode) {

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 // OpenAI API key
 const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-// console.log(apiKey);
+console.log(apiKey);
 
 
 // Function to generate code using the GPT API

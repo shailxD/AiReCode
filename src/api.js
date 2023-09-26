@@ -3,7 +3,8 @@
 import axios from 'axios';
 
 // OpenAI API key
-const apiKey = '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';
+// const apiKey = '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';
+const apiKey = process.env.OPENAI_API_KEY; // Use process.env to access environment variables
 
 // Function to generate code using the GPT API
 export async function generateCodeWithAI(inputCode) {

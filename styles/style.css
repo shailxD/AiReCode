@@ -54,8 +54,23 @@ body{
     font-family: 'General Sans', sans-serif;
     background-color: var(--clr-dark);
     color: var(--clr-light);
+    /* background: url('pacman.jpeg') no-repeat fixed center/cover; */
+    position: relative;
     cursor: none;
 }
+
+.body-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+  }
 
 /* custom cursor */
 .cursor-dot {

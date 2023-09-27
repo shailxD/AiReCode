@@ -70,7 +70,12 @@
     display: none;
 }
 
-.code-input__hr{
+.code-input__hr-top{
+    margin-bottom: 3rem;
+    border-color: var(--clr-slate800);
+}
+
+.code-input__hr-bottom{
     margin-top: 2rem;
     border-color: var(--clr-slate800);
 }

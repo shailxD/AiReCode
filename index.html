@@ -8,7 +8,7 @@
     <meta name="keywords" content="web design, html, css, js" />
     <title>AiReCode</title>
   </head>
-  <body>
+  <body class="body-overlay">
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
     <header class="header container">
@@ -114,6 +114,7 @@
         </p>
       </section>
       <section id="getstart" class="code-input-main container section">
+        <hr class="code-input__hr-top" />
         <div class="code-input">
           <h2 class="code-input__Code-heading">Enter Your Code</h2>
           <textarea id="code-input" class="code-input__textarea" placeholder="Paste or type your code here"></textarea>
@@ -123,7 +124,7 @@
           <pre id="generated-code-output" class="code-input__generated-output"></pre>
           <div id="chat-container" class="code-input__chat"></div>
         </div>
-        <hr class="code-input__hr" />
+        <hr class="code-input__hr-bottom" />
       </section>    
       <section id="about" class="about container section">
         <div class="about__content">

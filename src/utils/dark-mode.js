@@ -1,32 +1,42 @@
 const darkMode = () => {
-  const themeToggleBtns = document.querySelectorAll('#theme-toggle');
+  const darkModeToggleBtn = document.querySelector('#theme-toggle-dark');
+  const lightModeToggleBtn = document.querySelector('#theme-toggle-light');
   const headerImg = document.querySelector('.header__img');
   const theme = localStorage.getItem('theme');
   const originalSrc = headerImg.getAttribute('src');
 
-  // On mount
-  if (theme === 'light-mode') {
-    document.body.classList.add('light-mode');
-  } else {
-    headerImg.setAttribute('src', headerImg.getAttribute('data-src-dark'));
-  }
-
-  // Handlers
-  const handleThemeToggle = () => {
-    document.body.classList.toggle('light-mode');
+  // Function to toggle the theme
+  const toggleTheme = () => {
     if (document.body.classList.contains('light-mode')) {
-      localStorage.setItem('theme', 'light-mode');
-      headerImg.setAttribute('src', originalSrc); // Switch to the light version of the image
+      // Switch to dark mode
+      document.body.classList.remove('light-mode');
+      localStorage.setItem('theme', 'dark-mode');
+      headerImg.setAttribute('src', headerImg.getAttribute('data-src-dark'));
+      darkModeToggleBtn.style.display = 'block';
+      lightModeToggleBtn.style.display = 'none';
     } else {
-      localStorage.removeItem('theme');
-      headerImg.setAttribute('src', headerImg.getAttribute('data-src-dark')); // Switch to the dark version of the image
+      // Switch to light mode
+      document.body.classList.add('light-mode');
+      localStorage.setItem('theme', 'light-mode');
+      headerImg.setAttribute('src', originalSrc);
+      darkModeToggleBtn.style.display = 'none';
+      lightModeToggleBtn.style.display = 'block';
     }
   };
 
+  // Check the saved theme and set the initial button display
+  if (theme === 'light-mode') {
+    document.body.classList.add('light-mode');
+    lightModeToggleBtn.style.display = 'block';
+    darkModeToggleBtn.style.display = 'none';
+  } else {
+    darkModeToggleBtn.style.display = 'block';
+    lightModeToggleBtn.style.display = 'none';
+  }
+
   // Events
-  themeToggleBtns.forEach((btn) =>
-    btn.addEventListener('click', handleThemeToggle)
-  );
+  darkModeToggleBtn.addEventListener('click', toggleTheme);
+  lightModeToggleBtn.addEventListener('click', toggleTheme);
 };
 
 export default darkMode;

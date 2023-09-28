@@ -80,6 +80,12 @@
         padding-top: 1.5em;
     }
     
+    .header__theme-toggle-container{
+        display: flex;
+        gap: 1rem;
+    }
+
+    .header__moon,
     .header__sun{
         display: block;
         color: var(--clr-slate600);
@@ -87,7 +93,8 @@
         height: var(--size-base);
         transition: color 0.3s;
     }
-    
+
+    .header__moon:hover,
     .header__sun:hover{
         color: var(--clr-green);
     }
@@ -111,6 +118,7 @@
         font-size: var(--size-sm);
     }
 
+    .header__moon,
     .header__sun{
         width: var(--size-xl);
         height: var(--size-xl); 
@@ -127,6 +135,7 @@
         font-size: var(--size-base);
     }
 
+    .header__moon,
     .header__sun{
         width: var(--size-2xl);
         height: var(--size-2xl); 

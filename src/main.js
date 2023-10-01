@@ -1,5 +1,6 @@
 import '../styles/modern-normalize.css';
 import '../styles/style.css';
+import '../styles/components/preloader.css';
 import '../styles/components/header.css';
 import '../styles/components/hero.css';
 import '../styles/components/code-input.css';
@@ -15,12 +16,23 @@ import darkMode from './utils/dark-mode';
 import mobileNav from './utils/mobile-nav';
 import { setupAutoResizeTextarea } from './utils/auto-resize';
 import lazyLoading from './utils/lazy-loading';
+import { initializeBackToTopButton } from './utils/backToTop';
 
 customCursor(); // add a custom cursor
 darkMode(); // theme toggling function
 mobileNav(); // mobile menu toggle
 setupAutoResizeTextarea(); // call the auto-resize setup function
 lazyLoading(); //lazy laoding for optimisations
+initializeBackToTopButton(); // Call the function to initialize the "Back to Top" button
+
+
+// preloader logic
+import { handlePreloader } from './utils/preloader.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  handlePreloader();
+});
+
 
 // main api logic
 

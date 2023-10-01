@@ -4,11 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
     <meta name="description" content="Website using GPT API" />
     <meta name="keywords" content="web design, html, css, js" />
+    <link rel="preload" as="style" href="style.css">
     <title>AiReCode</title>
   </head>
   <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="preloader-inner">
+        <div class="preloader-message">Hello</div>
+      </div>
+    </div>
+
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
     <header class="header container">
@@ -101,9 +110,6 @@
     </div>
     <!-- End of Mobile Navigation -->
     <main>
-      <div class="backtotop">
-        <a href="#"></a>
-      </div>
       <section class="hero container section">
         <h2 class="hero__subtitle">AI ReCode</h2>
         <h1 class="hero__title"><strong>Revolutionizing</strong> Your Coding Experience</h1>
@@ -151,8 +157,9 @@
         <div class="about__img-wrapper">
           <img
             class="about__img lazy loading"
-            src="https://fakeimg.pl/2000x2000?font=bebas"
-            data-src="/AiReCode_1.jpg"
+            src="https://fakeimg.pl/1000x1000?font=bebas"
+            data-src="/arc.jpg"
+            data-src-dark="/arcDark.jpg"
             alt="Profile picture"
           />
         </div>
@@ -199,6 +206,14 @@
     <footer class="footer container section">
       <h3 class="footer__title">~ &copy; AiReCode, 2023 ~</h3>
     </footer>
+    <!-- back-to-top -->
+    <div>
+      <a id="back-to-top" href="#" role="button" title="Back to Top">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+          </svg>          
+      </a>
+    </div>
     <script type="module" src="./src/main.js"></script>
   </body>
 </html>

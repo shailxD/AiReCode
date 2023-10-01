@@ -2,8 +2,10 @@ const darkMode = () => {
   const darkModeToggleBtn = document.querySelector('#theme-toggle-dark');
   const lightModeToggleBtn = document.querySelector('#theme-toggle-light');
   const headerImg = document.querySelector('.header__img');
+  const aboutImg = document.querySelector('.about__img');
   const theme = localStorage.getItem('theme');
   const originalSrc = headerImg.getAttribute('src');
+  const aboutOriginalSrc = aboutImg.getAttribute('data-src');
 
   // Function to toggle the theme
   const toggleTheme = () => {
@@ -12,6 +14,7 @@ const darkMode = () => {
       document.body.classList.remove('light-mode');
       localStorage.setItem('theme', 'dark-mode');
       headerImg.setAttribute('src', headerImg.getAttribute('data-src-dark'));
+      aboutImg.setAttribute('src', aboutImg.getAttribute('data-src-dark'));
       darkModeToggleBtn.style.display = 'block';
       lightModeToggleBtn.style.display = 'none';
     } else {
@@ -19,6 +22,7 @@ const darkMode = () => {
       document.body.classList.add('light-mode');
       localStorage.setItem('theme', 'light-mode');
       headerImg.setAttribute('src', originalSrc);
+      aboutImg.setAttribute('src', aboutOriginalSrc);
       darkModeToggleBtn.style.display = 'none';
       lightModeToggleBtn.style.display = 'block';
     }
@@ -29,9 +33,15 @@ const darkMode = () => {
     document.body.classList.add('light-mode');
     lightModeToggleBtn.style.display = 'block';
     darkModeToggleBtn.style.display = 'none';
+    // Set image sources for light mode
+    headerImg.setAttribute('src', originalSrc);
+    aboutImg.setAttribute('src', aboutOriginalSrc);
   } else {
     darkModeToggleBtn.style.display = 'block';
     lightModeToggleBtn.style.display = 'none';
+    // Set image sources for dark mode
+    headerImg.setAttribute('src', headerImg.getAttribute('data-src-dark'));
+    aboutImg.setAttribute('src', aboutImg.getAttribute('data-src-dark'));
   }
 
   // Events
@@ -40,3 +50,4 @@ const darkMode = () => {
 };
 
 export default darkMode;
+

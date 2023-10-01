@@ -4,10 +4,10 @@ import { gsap } from 'gsap';
 // Function to display text messages in sequence and handle preloader removal
 function handlePreloader() {
   const messages = [
+    'नमस्ते',
+    'स्वागत हे',
     'Hello',
     'Bonjour',
-    'स्वागत हे',
-    'Ciao',
     'Olá',
     'おい',
     'Hallå',

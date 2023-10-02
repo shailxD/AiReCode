@@ -5,7 +5,6 @@ import { gsap } from 'gsap';
 function handlePreloader() {
   const messages = [
     'नमस्ते',
-    'स्वागत हे',
     'Hello',
     'Bonjour',
     'Olá',
@@ -13,22 +12,23 @@ function handlePreloader() {
     'Hallå',
     'Guten tag',
     'Hallo',
+    'स्वागत हे',
   ];
 
   const messageContainer = document.querySelector('.preloader-message');
 
   gsap.to(messageContainer, {
-    duration: 1, // Total duration for all messages
+    duration: 1.4, // Total duration for all messages
     repeat: 0, // Play the animation once
     keyframes: messages.map((message, index) => ({
       innerText: message,
-      delay: index === 0 ? 0.3 : 0.1, // Delay for each message
+      delay: index === 0 ? 0.7 : 0.1, // Delay for each message
     })),
   });
 
   // Scale and opacity animation for the preloader
   gsap.to('.preloader', {
-    duration: 1, // Duration for the animation
+    duration: 1.5, // Duration for the animation
     opacity: 1, 
     ease: 'power4.easeOut', // Use a different ease for a dynamic effect
     onComplete: () => {

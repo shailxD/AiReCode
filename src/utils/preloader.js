@@ -4,31 +4,31 @@ import { gsap } from 'gsap';
 // Function to display text messages in sequence and handle preloader removal
 function handlePreloader() {
   const messages = [
-    'नमस्ते',
-    'Hello',
-    'Bonjour',
-    'Olá',
-    'おい',
-    'Hallå',
-    'Guten tag',
-    'Hallo',
-    'स्वागत हे',
+    '• नमस्ते',
+    '• Hello',
+    '• Bonjour',
+    '• Olá',
+    '• おい',
+    '• Hallå',
+    '• Guten tag',
+    '• Hallo',
+    '• स्वागत हे',
   ];
 
   const messageContainer = document.querySelector('.preloader-message');
 
   gsap.to(messageContainer, {
-    duration: 1.6, // Total duration for all messages
+    duration: 1.8, // Total duration for all messages
     repeat: 0, // Play the animation once
     keyframes: messages.map((message, index) => ({
       innerText: message,
-      delay: index === 0 ? 1 : 0.1, // Delay for each message
+      delay: index === 0 ? 1.7 : 0.1, // Delay for each message
     })),
   });
 
   // Scale and opacity animation for the preloader
   gsap.to('.preloader', {
-    duration: 1.8, // Duration for the animation
+    duration: 2, // Duration for the animation
     opacity: 1, 
     ease: 'power4.easeOut', // Use a different ease for a dynamic effect
     onComplete: () => {
@@ -50,7 +50,7 @@ function animateHeader() {
   const header = document.querySelector('header');
 
   // Set initial styles (hidden at the top)
-  gsap.set(header, { opacity: 0, y: -50 });
+  gsap.set(header, { opacity: 0, y: 50 });
 
   // Animate the header with translateY and easing
   gsap.to(header, { opacity: 1, y: 0, duration: 1, ease: 'power4.out' });
@@ -61,7 +61,7 @@ function animateHero() {
   const hero = document.querySelector('.hero');
 
   // Set initial styles (hidden at the top)
-  gsap.set(hero, { opacity: 0, y: -50 });
+  gsap.set(hero, { opacity: 0, y: 50 });
 
   // Animate the hero section with translateY and easing
   gsap.to(hero, { opacity: 1, y: 0, duration: 1, ease: 'power4.out', delay: 0.5 });

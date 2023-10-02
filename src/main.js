@@ -8,19 +8,19 @@ import '../styles/components/about.css';
 import '../styles/components/howitwork.css';
 import '../styles/components/contact.css';
 import '../styles/components/footer.css';
-import '../styles/components/mobile-nav.css';
+import '../styles/components/mobile-nav.css'
 import '../styles/utils.css';
 
 import { customCursor } from './utils/custom-cursor';
-import darkMode from './utils/dark-mode'; 
 import mobileNav from './utils/mobile-nav';
+import darkMode from './utils/dark-mode'; 
 import { setupAutoResizeTextarea } from './utils/auto-resize';
 import lazyLoading from './utils/lazy-loading';
 import { initializeBackToTopButton } from './utils/backToTop';
 
 customCursor(); // add a custom cursor
+mobileNav(); //Mobile nav
 darkMode(); // theme toggling function
-mobileNav(); // mobile menu toggle
 setupAutoResizeTextarea(); // call the auto-resize setup function
 lazyLoading(); //lazy laoding for optimisations
 initializeBackToTopButton(); // Call the function to initialize the "Back to Top" button

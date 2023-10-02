@@ -28,13 +28,14 @@
     scroll-behavior: smooth; 
     resize: none;
     overflow: hidden;
+    caret-color: black;
+    background-color: var(--clr-textarea);
 }
 
 .code-input__textarea::placeholder {
     text-align: center;
     line-height: 50px;
 }
-  
 
 .code-input__btn {
     margin-top: 1rem;
@@ -53,6 +54,13 @@
     display: block;
     white-space: pre-wrap;
     text-align: left;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.chat-bubble:hover{
+    background-color: var(--clr-bubbleHover);
+    color: rgb(7, 10, 19);
 }
 
 .code-input p strong{

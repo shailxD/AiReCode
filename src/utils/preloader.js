@@ -18,7 +18,7 @@ function handlePreloader() {
   const messageContainer = document.querySelector('.preloader-message');
 
   gsap.to(messageContainer, {
-    duration: 1.5, // Total duration for all messages
+    duration: 1, // Total duration for all messages
     repeat: 0, // Play the animation once
     keyframes: messages.map((message, index) => ({
       innerText: message,
@@ -28,7 +28,7 @@ function handlePreloader() {
 
   // Scale and opacity animation for the preloader
   gsap.to('.preloader', {
-    duration: 1.5, // Duration for the animation
+    duration: 1, // Duration for the animation
     opacity: 1, 
     ease: 'power4.easeOut', // Use a different ease for a dynamic effect
     onComplete: () => {

@@ -9,7 +9,8 @@
     --clr-light50: rgba(255, 255, 255, 0.5);
     --clr-codestrong: #070a13;
     --clr-value: 255, 255, 255;
-
+    --clr-bubbleHover: #f1f5f9;
+    --clr-textarea: #cbd5e1;
     /* green rgb(9, 191, 96) */
     /* orange rgb(249, 115, 22) */
 
@@ -49,6 +50,8 @@ html{
     --clr-light50: rgba(0, 0, 0, 0.5);
     --clr-codestrong: #f97316;
     --clr-value: 0, 0, 0;
+    --clr-bubbleHover: #cbd5e1;
+    --clr-textarea: #ffffff;
 }
 
 body{
@@ -61,28 +64,10 @@ body{
 }
 
 /* custom cursor */
-.cursor-dot {
-    width: 6px;
-    height: 6px;
-    background-color: var(--clr-light);
-    position: fixed;
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
-    transform: translate(-50%, -50%); /* Center the cursor dot */
+.cursor-dot,
+.cursor-outline{
+    display: none;
 }
-
-.cursor-outline {
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--clr-light);
-    position: fixed;
-    border-radius: 50%;
-    z-index: 9998; /* Place it behind the cursor dot */
-    pointer-events: none;
-    transform: translate(-50%, -50%); /* Center the cursor outline */
-}
-
 /* end of custom cursor */
 
 img,
@@ -150,3 +135,42 @@ body::-webkit-scrollbar-thumb {
     color: var(--clr-dark);
   }
 
+/* xs */
+/* @media (min-width: 475px) {} */
+
+/* sm */
+/* @media (min-width: 640px) {} */
+
+/* md */
+/* @media (min-width: 768px) {} */
+
+/* lg */
+@media (min-width: 1024px) {
+    .cursor-dot {
+        width: 6px;
+        height: 6px;
+        background-color: var(--clr-light);
+        position: fixed;
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        transform: translate(-50%, -50%); /* Center the cursor dot */
+    }
+    
+    .cursor-outline {
+        width: 30px;
+        height: 30px;
+        border: 2px solid var(--clr-light);
+        position: fixed;
+        border-radius: 50%;
+        z-index: 9998; /* Place it behind the cursor dot */
+        pointer-events: none;
+        transform: translate(-50%, -50%); /* Center the cursor outline */
+    }    
+}
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+
+/* 2xl */
+/* @media (min-width: 1536px) {} */

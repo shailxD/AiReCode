@@ -1,6 +1,8 @@
 const darkMode = () => {
   const darkModeToggleBtn = document.querySelector('#theme-toggle-dark');
   const lightModeToggleBtn = document.querySelector('#theme-toggle-light');
+  const mobileDarkModeToggleBtn = document.querySelector('#mobile-theme-toggle-dark');
+  const mobileLightModeToggleBtn = document.querySelector('#mobile-theme-toggle-light');
   const headerImg = document.querySelector('.header__img');
   const aboutImg = document.querySelector('.about__img');
   const theme = localStorage.getItem('theme');
@@ -47,6 +49,8 @@ const darkMode = () => {
   // Events
   darkModeToggleBtn.addEventListener('click', toggleTheme);
   lightModeToggleBtn.addEventListener('click', toggleTheme);
+  mobileDarkModeToggleBtn.addEventListener('click', toggleTheme);
+  mobileLightModeToggleBtn.addEventListener('click', toggleTheme);
 };
 
 export default darkMode;

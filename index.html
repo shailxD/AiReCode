@@ -1,13 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.1/gsap.min.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicon_io/site.webmanifest" />
     <meta name="description" content="Website using GPT API" />
     <meta name="keywords" content="web design, html, css, js" />
-    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" as="style" href="style.css" />
     <title>AiReCode</title>
   </head>
   <body>
@@ -21,14 +38,14 @@
     <div class="cursor-dot" data-cursor-dot></div>
     <div class="cursor-outline" data-cursor-outline></div>
     <header class="header container">
-      <nav class="header__nav"> 
+      <nav class="header__nav">
         <a href="#">
-          <img 
-            class="header__img" 
-            src="/airecode.png" 
-            data-src-dark="/airecodedark.png" 
+          <img
+            class="header__img"
+            src="/airecode.png"
+            data-src-dark="/airecodedark.png"
             alt="AiReCode"
-          >
+          />
         </a>
         <ul class="header__menu">
           <li>
@@ -43,15 +60,43 @@
         </ul>
         <ul class="header__menu2">
           <li class="header__theme-toggle-container">
-            <button aria-label="theme-toggle btn" id="theme-toggle-dark" class="header__moon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            <button
+              aria-label="theme-toggle btn"
+              id="theme-toggle-dark"
+              class="header__moon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
               </svg>
             </button>
-            <button aria-label="theme-toggle btn" id="theme-toggle-light" class="header__sun">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-              </svg>                     
+            <button
+              aria-label="theme-toggle btn"
+              id="theme-toggle-light"
+              class="header__sun"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+                />
+              </svg>
             </button>
           </li>
           <li class="header__line"></li>
@@ -60,7 +105,11 @@
           </li>
         </ul>
         <button aria-label="mobile nav button" class="header__bars">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+          >
             <path
               fill-rule="evenodd"
               d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
@@ -75,19 +124,49 @@
       <nav>
         <ul class="mobile-nav__menu">
           <li><a class="mobile-nav__link" href="#about">About us</a></li>
-          <li><a class="mobile-nav__link" href="#howitwork">How it works</a></li>
+          <li>
+            <a class="mobile-nav__link" href="#howitwork">How it works</a>
+          </li>
           <li><a class="mobile-nav__link" href="#contact">Contact</a></li>
           <li class="mobile-nav__link-line"></li>
           <li class="mobile__theme-toggle-container">
-            <button aria-label="theme-toggle btn" id="mobile-theme-toggle-dark" class="mobile-nav__moon">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            <button
+              aria-label="theme-toggle btn"
+              id="mobile-theme-toggle-dark"
+              class="mobile-nav__moon"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                />
               </svg>
             </button>
-            <button aria-label="theme-toggle btn" id="mobile-theme-toggle-light" class="mobile-nav__sun">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-              </svg>                     
+            <button
+              aria-label="theme-toggle btn"
+              id="mobile-theme-toggle-light"
+              class="mobile-nav__sun"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+                />
+              </svg>
             </button>
           </li>
         </ul>
@@ -97,32 +176,62 @@
     <main>
       <section class="hero container section">
         <h2 class="hero__subtitle">AI ReCode</h2>
-        <h1 class="hero__title"><strong>Revolutionizing</strong> Your Coding Experience</h1>
+        <h1 class="hero__title">
+          <strong>Revolutionizing</strong> Your Coding Experience
+        </h1>
         <p class="hero__description">
-          Welcome to AI ReCode, your ultimate AI-powered code companion designed to elevate your programming endeavors. Our sleek and intuitive user interface empowers you to streamline your coding tasks with ease and efficiency.
+          Welcome to AI ReCode, your ultimate AI-powered code companion designed
+          to elevate your programming endeavors. Our sleek and intuitive user
+          interface empowers you to streamline your coding tasks with ease and
+          efficiency.
         </p>
       </section>
       <section id="getstart" class="code-input-main container section">
         <hr class="code-input__hr-top" />
         <div class="code-input">
           <h2 class="code-input__Code-heading">Enter Your Code</h2>
-          <textarea id="code-input" class="code-input__textarea" placeholder="Paste or type your code here"></textarea>
-          <button id="generate-button" class="code-input__btn btn">Generate</button>
-          <div id="placeholder-text" style="display: none;"></div> <!-- Hidden element for placeholder text -->
-          <h2 id="generate-code-title" class="code-input__Code-heading">Generated Code</h2>
-          <pre id="generated-code-output" class="code-input__generated-output"></pre>
+          <textarea
+            id="code-input"
+            class="code-input__textarea"
+            placeholder="Paste or type your code here"
+          ></textarea>
+          <button id="generate-button" class="code-input__btn btn">
+            Generate
+          </button>
+          <div id="placeholder-text" style="display: none"></div>
+          <!-- Hidden element for placeholder text -->
+          <h2 id="generate-code-title" class="code-input__Code-heading">
+            Generated Code
+          </h2>
+          <pre
+            id="generated-code-output"
+            class="code-input__generated-output"
+          ></pre>
           <div id="chat-container" class="code-input__chat"></div>
         </div>
         <hr class="code-input__hr-bottom" />
-      </section>    
+      </section>
       <section id="about" class="about container section">
         <div class="about__content">
           <h2 class="about__title">About Us</h2>
           <p class="about__description">
-            <strong id="hellothere">Hello there👋!</strong> AI ReCode is your <strong>AI-powered</strong> code companion tailored to assist with a wide array of programming tasks. This intelligent tool is not only capable of refining and perfecting your code but also adept at offering insights and explanations for various programming concepts. AI ReCode is here to make your coding journey smoother and more productive.
+            <strong id="hellothere">Hello there👋!</strong> AI ReCode is your
+            <strong>AI-powered</strong> code companion tailored to assist with a
+            wide array of programming tasks. This intelligent tool is not only
+            capable of refining and perfecting your code but also adept at
+            offering insights and explanations for various programming concepts.
+            AI ReCode is here to make your coding journey smoother and more
+            productive.
           </p>
           <p class="about__description">
-            The purpose of AI ReCode is to emerges as an <strong>innovative</strong> coding companion, accelerating tasks from code creation to refinement. Its swift <strong>code generation</strong> and <strong>error-spotting capabilities</strong> empower programmers at all levels. By simplifying complexities and amplifying productivity, it redefines the coding journey, promising a smoother path toward successful programming endeavors.
+            The purpose of AI ReCode is to emerges as an
+            <strong>innovative</strong> coding companion, accelerating tasks
+            from code creation to refinement. Its swift
+            <strong>code generation</strong> and
+            <strong>error-spotting capabilities</strong> empower programmers at
+            all levels. By simplifying complexities and amplifying productivity,
+            it redefines the coding journey, promising a smoother path toward
+            successful programming endeavors.
           </p>
           <hr class="about__hr" />
           <h3 class="about__subtitle">Technologies Used</h3>
@@ -152,33 +261,47 @@
       <section id="howitwork" class="how-it-works container section">
         <h2 class="how-it-works__title">How It Works</h2>
         <p class="how-it-works__description">
-            Wondering how to use AiReCode to supercharge your coding? It's as easy as pie! Here's a quick guide:
+          Wondering how to use AiReCode to supercharge your coding? It's as easy
+          as pie! Here's a quick guide:
         </p>
         <ul class="how-it-works__list-container">
-            <li class="how-it-works__list">
-                <h3 class="how-it-works__list-title"><strong>Step 1</strong>: Input Your Code</h3>
-                <p class="how-it-works__list-description">
-                    Start by typing your code or copy-pasting it into the "Code Input" box. Feeling adventurous? Try coding a simple "Hello, World!" program.
-                </p>
-            </li>
-            <li class="how-it-works__list">
-                <h3 class="how-it-works__list-title"><strong>Step 2</strong>: Click Generate</h3>
-                <p class="how-it-works__list-description">
-                    Once your code is ready, hit the "Generate" button. Our AI wizard will work its magic.
-                </p>
-            </li>
-            <li class="how-it-works__list">
-                <h3 class="how-it-works__list-title"><strong>Step 3</strong>: Voilà, Your Code!</h3>
-                <p class="how-it-works__list-description">
-                    In the blink of an eye, you'll see the generated code appear in the "Generated Code" box below. Copy, paste, and conquer your coding challenges!
-                </p>
-            </li>
+          <li class="how-it-works__list">
+            <h3 class="how-it-works__list-title">
+              <strong>Step 1</strong>: Input Your Code
+            </h3>
+            <p class="how-it-works__list-description">
+              Start by typing your code or copy-pasting it into the "Code Input"
+              box. Feeling adventurous? Try coding a simple "Hello, World!"
+              program.
+            </p>
+          </li>
+          <li class="how-it-works__list">
+            <h3 class="how-it-works__list-title">
+              <strong>Step 2</strong>: Click Generate
+            </h3>
+            <p class="how-it-works__list-description">
+              Once your code is ready, hit the "Generate" button. Our AI wizard
+              will work its magic.
+            </p>
+          </li>
+          <li class="how-it-works__list">
+            <h3 class="how-it-works__list-title">
+              <strong>Step 3</strong>: Voilà, Your Code!
+            </h3>
+            <p class="how-it-works__list-description">
+              In the blink of an eye, you'll see the generated code appear in
+              the "Generated Code" box below. Copy, paste, and conquer your
+              coding challenges!
+            </p>
+          </li>
         </ul>
       </section>
       <section id="contact" class="contact container section">
         <h2 class="contact__title">Get In Contact</h2>
         <p class="contact__description">
-          Whether you are starting a project, having coding-related doubtes or simply want to drop a greeting, our inbox is always open so feel free to reach out and We will get back to you as soon as possible.
+          Whether you are starting a project, having coding-related doubtes or
+          simply want to drop a greeting, our inbox is always open so feel free
+          to reach out and We will get back to you as soon as possible.
         </p>
         <a
           class="contact__btn btn"
@@ -194,9 +317,19 @@
     <!-- back-to-top -->
     <div>
       <a id="back-to-top" href="#" role="button" title="Back to Top">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
-          </svg>          
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+          />
+        </svg>
       </a>
     </div>
     <script type="module" src="./src/main.js"></script>

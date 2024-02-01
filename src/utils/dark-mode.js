@@ -7,7 +7,7 @@ const darkMode = () => {
   const aboutImg = document.querySelector('.about__img');
   const theme = localStorage.getItem('theme');
   const originalSrc = headerImg.getAttribute('src');
-  const aboutOriginalSrc = aboutImg.getAttribute('data-src');
+  const aboutOriginalSrc = aboutImg.getAttribute('data-src');   
 
   // Function to toggle the theme
   const toggleTheme = () => {
